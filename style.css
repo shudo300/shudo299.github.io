@@ -1,0 +1,121 @@
+/* 全体のデザイン */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+/* メインタイトル */
+.main-title {
+    font-size: 3em;
+    color: red; /* タイトルを赤色に */
+    margin-bottom: 20px;
+    line-height: 1.2em; /* 行間を調整 */
+    transition: font-size 0.3s ease;
+}
+
+/* 個別の行 */
+.line1, .line2 {
+    display: block;
+    white-space: nowrap; /* 行を折り返さない */
+}
+
+/* ボタンのタイトル */
+.button-title {
+    font-size: 2em;
+    color: #4a90e2;
+    margin-bottom: 20px;
+    transition: font-size 0.3s ease;
+}
+
+/* ボタンセクション */
+.button-container {
+    display: flex;
+    flex-direction: column; /* ボタンを縦に並べる */
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* 投票ボタン */
+.vote-button {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 15px; /* 角を丸く */
+    width: 250px;
+    height: auto;
+    font-size: 1.2em;
+    padding: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    word-wrap: break-word;
+    white-space: normal;
+    text-align: center;
+}
+
+.vote-button:hover {
+    background-color: #ffa07a;
+    transform: scale(1.05);
+}
+
+/* 投票済みメッセージ */
+#thank-you {
+    margin-top: 30px;
+    font-size: 1.8em;
+    color: #32cd32;
+}
+
+/* 隠すためのクラス */
+.hidden {
+    display: none;
+}
+
+/* メディアクエリ - 小さい画面向け */
+@media (max-width: 800px) {
+    .main-title {
+        font-size: 2.5em; /* 画面幅に応じて小さく */
+    }
+
+    .button-title {
+        font-size: 1.5em; /* ボタンタイトルも小さく */
+    }
+}
+
+@media (max-width: 600px) {
+    .main-title {
+        font-size: 2em; /* さらに小さい画面向け */
+    }
+
+    .button-title {
+        font-size: 1.2em;
+    }
+
+    .vote-button {
+        width: 180px; /* スマートフォン向けに幅を狭める */
+        font-size: 1em;
+        padding: 8px;
+    }
+}
+
+#splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+#splash-screen img {
+    width: 150px;
+    height: auto;
+}
